@@ -82,7 +82,7 @@
 다음 방법들을 사용할 수 있다
 
 * 정확하게 `const`를 이용하도록 라이브러리를 업데이트한다; 장기적인 대안으로 좋다
-* "`const`속성을 타입 변환(cast)을 통해 해지한다"; [가능한 피하는 것이 좋다](#Res-casts-const)
+* "`const`속성을 타입 변환(cast)을 통해 해지한다"; [가능한 피하는 것이 좋다](Expr.md#Res-casts-const)
 * wrapper 함수를 제공한다
 
 Example:
@@ -124,7 +124,7 @@ f()의 선언을 수정할 수 없는 경우에만 사용해야 하는 임시방
 클래스가 사용자들에게 제공하는 의미론(불변 조건)에 의거하여 타당하다고 여겨질 경우에만 이러한 값 변경이 이루어질 수 있도록 보장하는 것은
 해당 클래스의 역할이다.
 
-**See also**: [Pimpl](#Ri-pimpl)
+**See also**: [Pimpl](Interfaces.md#Ri-pimpl)
 
 ##### Enforcement
 
@@ -151,7 +151,7 @@ f()의 선언을 수정할 수 없는 경우에만 사용해야 하는 임시방
 
 ##### Note
 
-[`const`속성을 타입 변환을 통해 없애지 말라](#Res-casts-const).
+[`const`속성을 타입 변환을 통해 없애지 말라](Expr.md#Res-casts-const).
 
 ##### Enforcement
 
