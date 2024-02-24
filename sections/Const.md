@@ -29,13 +29,22 @@
     for (int i : c) cout << i << '\n';          // BAD: just reading
 ```
 
-##### Exception
+##### Exceptions
+
+복사하는 비용보다 이동하는 비용이 더 저렴한 지역 변수는 `const`로 선언하지 않는 것이 좋다.  `const` 선언이 불필요한 복사를 강제할 수 있기 때문이다.
+
+```c++
+std::vector<int> f(int i)
+{
+    std::vector<int> v{ i, i, i };  // const not needed
+    return v;
+}
+```
 
 함수의 인자들의 값이 변경되는 경우는 드물지만, 또한 이들이 const 로 선언되는 경우 역시 드물다.
 혼동과 수많은 거짓 양성 (false positives) 테스트 결과를 피하기 위해, 이 규칙은 함수의 인자들에 대해서는 적용하지 않도록 한다.
 
 ```c++
-    void f(const char* const p); // pedantic
     void g(const int i);        // pedantic
 ```
 
